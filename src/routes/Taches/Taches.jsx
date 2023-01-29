@@ -98,6 +98,7 @@ export default function Taches() {
                       nom={element.nom}
                       categorie={element.categorie}
                       niveau={element.niveau}
+                      disabled={true}
                     ></CardTache>
                   );
                 })}

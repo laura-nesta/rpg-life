@@ -1,7 +1,3 @@
-.button__new{
-    
-}
-
 .add-task{
     float: right;
     margin-right: 20px;
@@ -10,6 +6,27 @@
 
 .tache-liste{
     margin-top: 60px;
+}  
+
+.card-tache{
+  width: 80%;
+}
+
+.tache-complete{
+  display: inline;
+}
+
+.bouton-action{
+  display: flex;
+  float: right;
+}
+
+.supp-tache{
+  top: 0;
+}
+
+.modif-tache{
+  bottom: 0
 }
 
 .modal{

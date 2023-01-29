@@ -6,7 +6,7 @@ export default function CardTache(props) {
   return (
     <div
       onClick={() => {
-        isDone(!done);
+        isDone(!done && props.disabled);
       }}
       className={done ? "card done" : "card"}
     >

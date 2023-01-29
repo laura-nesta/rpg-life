@@ -19,7 +19,11 @@ export default function Parametres() {
   const [displayedCategorie, setDisplayedCategorie] = useState([]);
   const [categorie, setCategorie] = React.useState([]);
   const [modal, setDisplayModal] = React.useState(false);
+
   const [frequence, setFrequence] = React.useState("");
+  const [competence, setCompetence] = React.useState("");
+  const [nom, setNom] = React.useState("");
+  const [difficulte, setDifficulte] = React.useState(0);
 
   const taches = [
     {
@@ -135,12 +139,37 @@ export default function Parametres() {
     setDisplayedCategorie(tab);
   }
 
+  function addTask() {
+    const tache = {
+      nom: nom,
+      categorie: competence,
+      niveau: difficulte,
+      frequence: frequence,
+      userId: 1,
+    };
+    taches.push(tache);
+    console.log(taches);
+    setDisplayModal(!modal);
+  }
+
   const handleChange = (event) => {
     setCategorie(event.target.value);
   };
 
   const handleChangeFrequence = (event) => {
     setFrequence(event.target.value);
+  };
+
+  const handleChangeNom = (event) => {
+    setNom(event.target.nom);
+  };
+
+  const handleChangeCompetence = (event) => {
+    setCompetence(event.target.competence);
+  };
+
+  const handleChangeDifficulte = (event) => {
+    setDifficulte(event.target.difficulte);
   };
 
   return (
@@ -152,6 +181,7 @@ export default function Parametres() {
 
         <div className="main-container">
           <div className="container">
+            {/* Boutton qui permet d'ouvrir la modal pour ajouter une tâche */}
             <div className="add-task">
               <Button
                 sx={{
@@ -165,21 +195,57 @@ export default function Parametres() {
                 Nouvelle tâche +
               </Button>
             </div>
+            {/* Liste des tâches */}
             <div className="tache-liste">
               <div id="tache">
                 {displayedTasks.map((element, i) => {
                   return (
-                    <CardTache
-                      key={i + "_" + element.frequence}
-                      nom={element.nom}
-                      categorie={element.categorie}
-                      niveau={element.niveau}
-                    ></CardTache>
+                    <div className="tache-complete">
+                      <div className="card-tache">
+                        <CardTache
+                          key={i + "_" + element.frequence}
+                          nom={element.nom}
+                          categorie={element.categorie}
+                          niveau={element.niveau}
+                          disabled={false}
+                        ></CardTache>
+                      </div>
+
+                      <div class="bouton-action">
+                        <Button
+                          sx={{
+                            width: "20px",
+                            color: "rgb(0, 153, 153)",
+                            backgroundColor: "#00000010",
+                            borderColor: "rgb(0, 153, 153)",
+                          }}
+                          // onClick={() => setDisplayModal(!modal)}
+                          variant="outlined"
+                          className="supp-tache"
+                        >
+                          x
+                        </Button>
+                        <Button
+                          sx={{
+                            width: "20px",
+                            color: "rgb(0, 153, 153)",
+                            backgroundColor: "#00000010",
+                            borderColor: "rgb(0, 153, 153)",
+                          }}
+                          // onClick={() => setDisplayModal(!modal)}
+                          variant="outlined"
+                          className="modif-tache"
+                        >
+                          ->
+                        </Button>
+                      </div>
+                    </div>
                   );
                 })}
               </div>
             </div>
 
+            {/* Modal qui permet d'ajouter une nouvelle tâche  */}
             <div
               className={modal ? "modal new-task" : "modal new-task innactive"}
             >
@@ -190,6 +256,9 @@ export default function Parametres() {
                   label="Nom"
                   variant="outlined"
                   size="small"
+                  value={nom}
+                  onChange={handleChangeNom}
+                  // onChange={() => setNom(nom)}
                   sx={{
                     input: {
                       color: "#FFFFFF80",
@@ -217,6 +286,8 @@ export default function Parametres() {
                     bgcolor: "#00000010",
                   }}
                   size="small"
+                  value={competence}
+                  onChange={handleChangeCompetence}
                 >
                   <InputLabel id="demo-simple-select-label">
                     Compétence
@@ -275,6 +346,7 @@ export default function Parametres() {
                   marks
                   min={0}
                   max={10}
+                  onChange={handleChangeDifficulte}
                 />
               </div>
               <div className="button-submit">
@@ -284,7 +356,7 @@ export default function Parametres() {
                     backgroundColor: "#00000010",
                     borderColor: "rgb(0, 153, 153)",
                   }}
-                  href="tache"
+                  onClick={addTask}
                   variant="outlined"
                 >
                   Créer la tâche
