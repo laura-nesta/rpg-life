@@ -219,7 +219,7 @@ export default function Parametres() {
                             backgroundColor: "#00000010",
                             borderColor: "rgb(0, 153, 153)",
                           }}
-                          // onClick={() => setDisplayModal(!modal)}
+                          // onClick={supprimTache}
                           variant="outlined"
                           className="supp-tache"
                         >
@@ -232,7 +232,7 @@ export default function Parametres() {
                             backgroundColor: "#00000010",
                             borderColor: "rgb(0, 153, 153)",
                           }}
-                          // onClick={() => setDisplayModal(!modal)}
+                          // onClick={modifieTache}
                           variant="outlined"
                           className="modif-tache"
                         >

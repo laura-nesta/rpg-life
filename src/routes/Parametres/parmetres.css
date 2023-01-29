@@ -10,6 +10,7 @@
 
 .card-tache{
   width: 80%;
+  float:right;
 }
 
 .tache-complete{
@@ -17,16 +18,16 @@
 }
 
 .bouton-action{
-  display: flex;
-  float: right;
+  
 }
 
 .supp-tache{
-  top: 0;
+  float:left;
+  margin-top: 10px;
 }
 
 .modif-tache{
-  bottom: 0
+  clear:both;
 }
 
 .modal{
