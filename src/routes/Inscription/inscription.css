@@ -1,0 +1,53 @@
+.lien-connexion{
+    margin-top: 30px;
+    color: aqua;
+}
+
+#connexion{
+    margin-left: 50px;
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+#inscription{
+    float: right;
+    margin-right: 50px;
+    color: white;
+}
+
+.active{
+    text-decoration: underline !important;
+}
+
+.formulaire{
+    padding: 10px;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.button-submit{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.label-input{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.input-text{
+    margin: 20px;
+}
+
+.textfield_input{
+    border-color: rgb(34, 124, 109) !important;
+    background-color: rgba(39, 39, 39, 0.2) !important;
+}
+
+.button{
+    color: aquamarine;
+    background-color: aquamarine;
+}

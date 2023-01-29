@@ -1,0 +1,80 @@
+.card{
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #FFFFFF20;
+    border-radius: 5px 10%;
+}
+
+.done{
+  border: 2px solid rgb(0, 153, 153);
+  background-color: rgba(0, 153, 153, 0.3);
+}
+
+.tache-nom{
+    float: left;
+    color: white;
+}
+
+.tache-categorie{
+    float: right;
+    color: rgb(0, 153, 153);
+    margin-right: 20px;
+}
+
+.difficulte{
+    margin-top: 30px;
+}
+
+
+/* skill level graph */
+.skill-level {
+    height: 1em;
+    margin: 10px 0px;
+    width: 100%;
+    /* min-width: 400px; */
+  }
+  .skill-level span {
+    background: linear-gradient(rgb(0, 153, 153),rgb(51, 241, 255),rgb(3, 95, 97));
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.7);
+    width: 8%;
+    height: 5px;
+    display: inline-block;
+    margin: 0 1px;
+  }
+  .show-0 span:nth-child(n+1) {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .show-1 span:nth-child(n+2) {
+    background: white;
+  }
+  .show-2 span:nth-child(n+3) {
+    background: white;
+  }
+  .show-3 span:nth-child(n+4) {
+    background: white;
+  }
+  .show-4 span:nth-child(n+5) {
+    background: white;
+  }
+  .show-5 span:nth-child(n+6) {
+    background: white;
+  }
+  .show-6 span:nth-child(n+7) {
+    background: white;
+  }
+  .show-7 span:nth-child(n+8) {
+    background: white;
+  }
+  .show-8 span:nth-child(n+9) {
+    background: white;
+  }
+  .show-9 span:nth-child(n+10) {
+    background: white;
+  }
+  .show-10 span:nth-child(n+11) {
+    background: white;
+  }
+  

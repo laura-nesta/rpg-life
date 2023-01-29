@@ -1,0 +1,6 @@
+.icone-menu.active{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg,rgba(51, 241, 255,0), rgb(51, 241, 255) 100%);
+    /* background: radial-gradient(circle, rgba(51, 241, 255) 0%, rgba(51, 241, 255,0) 100%); */
+    border-radius: 10% 10% 0px 0px;
+}

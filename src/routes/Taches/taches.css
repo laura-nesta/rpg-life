@@ -1,0 +1,31 @@
+.menu-agenda{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.jour{
+    float: left;
+    margin-left: 30px;
+    color: white;
+}
+
+.semaine{
+    float: left;
+    margin-left: 50px;
+    color: white;
+}
+
+.mois{
+    float: right;
+    margin-right: 50px;
+    color: white;
+}
+
+.taches-liste{
+    margin-top: 60px;
+}
+
+.active{
+  color: rgb(0, 153, 153);
+  text-decoration: underline;
+}
