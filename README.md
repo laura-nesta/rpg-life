@@ -43,13 +43,21 @@ Il peut également ajouter une nouvelle compétence grâce au bouton "nouvelle c
 
 ### Tâches
 
+La page des tâches permet d'afficher les tâches en cours en fonction de la périodicité.  
+Quand l'utilisateur clique sur une tâche, elle considérée comme faite. 
+
 ![image](https://user-images.githubusercontent.com/99044194/215353073-d6a02e8d-cdb5-43f5-836d-bed5f2456a78.png)
 ![image](https://user-images.githubusercontent.com/99044194/215353089-9f61d067-231c-44ed-b9a6-b4eebfbf6a35.png)
 ![image](https://user-images.githubusercontent.com/99044194/215353103-efb906ec-9053-4ff4-9b49-4053058bff91.png)
+![image](https://user-images.githubusercontent.com/99044194/215355815-9bd4f6d1-63a2-4743-bf4a-35b233833478.png)
+
 
 
 
 ### Compte 
+
+Sur la page de compte l'utilisateur retrouve sa photo de profil et son pseudo. 
+Il peut égallement se déconnecter. 
 
 ![image](https://user-images.githubusercontent.com/99044194/215353132-e15932b7-0fa2-4bfb-a4b1-ba1d281fa0c3.png)
 
@@ -79,10 +87,16 @@ Le back de l'application utilise Redux. Pour l'instant le back ne fonctionne pas
 ## A faire prochainement 
 
 * Mettre en place le back de l'application avec redeux 
-* Réinitialiser les tâches une fois la périodicité écoulée. 
-    ** Tous les jours pour les tâches quotidiennes
-    ** Toutes les semaines pour les hebdomadaires 
-    ** Tous les mois pour les mensuelles
+* Réinitialiser les tâches une fois la périodicité écoulée.  
+    * Tous les jours pour les tâches quotidiennes  
+    * Toutes les semaines pour les hebdomadaires   
+    * Tous les mois pour les mensuelles  
 * Connecter l'application à l'API directus 
 * Mettre en place la montée de niveau en fonction des tâches validées. 
+* Ajouter la possibilité de modifier son pseudo et sa photo de profil. 
+
+## Les évolutions prossibles
+
+* Mettre en place un systeme d'amis pour partagé sa toile de compétence. 
+* Pouvoir se lancé des défis entre amis avec des tâches communes. 
 
