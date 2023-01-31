@@ -92,7 +92,8 @@ Le composant <CardTache> est dans le dossier /components/molecules/cardTache
 Le front de l'apllication est en place. Toutes les pages s'affichent et la navigation fonctionne.   
 Les données sont pour l'instant en statiques dans l'application.  
 L'API sur directus est en place.  
-Le back de l'application utilise Redux. Pour l'instant le back ne fonctionne pas encore.  
+Le back de l'application utilise Redux. Pour l'instant le back ne fonctionne pas.  
+Les fonctionnalitées de l'application ne sont pas encore mise en place. 
 
 ### A faire prochainement 
 
