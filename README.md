@@ -8,6 +8,9 @@ L'application est simple avec une interface qui se veut intuitive.
 Toutes les compétences et tâches sont entièrement personnalisable. Lors de la première connexion (inscription), des compétences et tâches sont déjà définies pour exemples.  
 Il est possible de modifier, supprimer ou ajouter une compétence ou une tâche.  
 
+Des documents complémentaires sont disponibles sur le drive suivant : 
+https://drive.google.com/drive/folders/1618Mrqp6o1Gz7JrQdFMK14gA2WJs6QVU?usp=sharing
+
 ## L'application
 
 Lors du premier lancement de l'application, on est sur la page de connexion. 
@@ -38,6 +41,12 @@ Il peut également ajouter une nouvelle compétence grâce au bouton "nouvelle c
 ![image](https://user-images.githubusercontent.com/99044194/215345985-7dbbbb1b-33f1-4c4f-80ae-40ed02e0d3c4.png)
 
 ### Paramètres 
+
+Sur la page de paramètres, on retrouve la liste de tâches.  
+Il est possible d'ajouter une nouvelle tâche. Mais également de modifier ou supprimer une tâche.  
+
+![image](https://user-images.githubusercontent.com/99044194/215886882-b63df025-68bb-4623-9974-6810d9188cc9.png)
+![image](https://user-images.githubusercontent.com/99044194/215886814-97bfba93-a83c-487a-9cea-cc01d8489b98.png)
 
 
 
@@ -77,14 +86,15 @@ Les composants :
 Le composant <BottomNavBar> est dans le dossier /components/atoms/BotomNavBar  
 Le composant <CardTache> est dans le dossier /components/molecules/cardTache  
 
-## Le projet actuellement 
+## Les évoluations 
+### Le projet actuellement 
 
 Le front de l'apllication est en place. Toutes les pages s'affichent et la navigation fonctionne.   
 Les données sont pour l'instant en statiques dans l'application.  
 L'API sur directus est en place.  
 Le back de l'application utilise Redux. Pour l'instant le back ne fonctionne pas encore.  
 
-## A faire prochainement 
+### A faire prochainement 
 
 * Mettre en place le back de l'application avec redeux 
 * Réinitialiser les tâches une fois la périodicité écoulée.  
@@ -95,8 +105,20 @@ Le back de l'application utilise Redux. Pour l'instant le back ne fonctionne pas
 * Mettre en place la montée de niveau en fonction des tâches validées. 
 * Ajouter la possibilité de modifier son pseudo et sa photo de profil. 
 
-## Les évolutions prossibles
+### Les évolutions prossibles
 
 * Mettre en place un systeme d'amis pour partagé sa toile de compétence. 
 * Pouvoir se lancé des défis entre amis avec des tâches communes. 
 
+## Lancer l'application
+
+* Télecharger ou cloner le repertoire 
+* Dans un terminal, se placer dans le dossier du reprtoire. 
+* lancer la commande `npm i`
+* lancer la commande `npm start`
+
+L'application est adapté au modèle mobile. Il est donc conseillé de visualiser l'application en iPhone SE  
+(click droit -> inspecter l'élement -> 2eme icone en haut a gauche de l'inspecteur -> Dimension : iPhone SE dans la page )
+
+Il est possible d'utiliser un compte de test pour se connecter (pseudo : gandalf ; mdp : password) 
+ 
