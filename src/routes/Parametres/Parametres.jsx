@@ -149,6 +149,9 @@ export default function Parametres() {
     };
     taches.push(tache);
     console.log(taches);
+    // setDisplayedTasks(taches);
+
+    displayTaches(1);
     setDisplayModal(!modal);
   }
 

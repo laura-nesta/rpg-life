@@ -5,6 +5,8 @@ import "../base.css";
 import React, { useState, useEffect } from "react";
 
 import { Button } from "@mui/material";
+import { TextField } from "@mui/material";
+import Slider from "@mui/material/Slider";
 
 import {
   Chart as ChartJS,
@@ -29,6 +31,10 @@ ChartJS.register(
 export default function Accueil() {
   const [displayedLabel, setDisplayedLabel] = useState([]);
   const [displayedLevel, setDisplayedLevel] = useState([]);
+
+  const [nom, setNom] = React.useState("");
+  const [modal, setDisplayModal] = React.useState(false);
+  const [difficulte, setDifficulte] = React.useState(0);
 
   const categories = [
     {
@@ -101,6 +107,28 @@ export default function Accueil() {
     setDisplayedLevel(tabLevel);
   }
 
+  const handleChangeNom = (event) => {
+    setNom(event.target.nom);
+  };
+
+  const handleChangeDifficulte = (event) => {
+    setDifficulte(event.target.difficulte);
+  };
+
+  function addCompetence() {
+    const competence = {
+      nom: nom,
+      niveau: difficulte,
+      userId: 1,
+    };
+    categories.push(competence);
+    console.log(categories);
+    // setDisplayedTasks(taches);
+
+    displayLabelsAndLevel(1);
+    setDisplayModal(!modal);
+  }
+
   const data = {
     labels: displayedLabel,
     datasets: [
@@ -159,10 +187,72 @@ export default function Accueil() {
                 sx={{
                   color: "rgb(0, 153, 153)",
                 }}
+                onClick={() => setDisplayModal(!modal)}
               >
                 Nouvelle compétence +
               </Button>
             </div>
+          </div>
+        </div>
+
+        {/* Modal qui permet d'ajouter une nouvelle compétence  */}
+        <div className={modal ? "modal new-task" : "modal new-task innactive"}>
+          <h1>Nouvelle compétence</h1>
+          <div className="input-text">
+            <TextField
+              id="outlined-size-small"
+              label="Nom"
+              variant="outlined"
+              size="small"
+              value={nom}
+              onChange={handleChangeNom}
+              // onChange={() => setNom(nom)}
+              sx={{
+                input: {
+                  color: "#FFFFFF80",
+                  backgroundColor: "#00000010",
+                  borderColor: "rgb(0, 153, 153)",
+                },
+
+                backgroundColor: "#00000010",
+                "data-shrink": {
+                  color: "#0000000",
+                  backgroundColor: "#F6F6E8",
+                  textDecoration: "line-through",
+                },
+              }}
+            />
+          </div>
+
+          <div className="niveau">
+            <span>Difficulté</span>
+            <Slider
+              sx={{
+                color: "rgb(0, 153, 153)",
+              }}
+              aria-label="Niveau"
+              defaultValue={0}
+              valueLabelDisplay="auto"
+              step={1}
+              marks
+              min={0}
+              max={10}
+              onChange={handleChangeDifficulte}
+            />
+          </div>
+
+          <div className="button-submit">
+            <Button
+              sx={{
+                color: "rgb(0, 153, 153)",
+                backgroundColor: "#00000010",
+                borderColor: "rgb(0, 153, 153)",
+              }}
+              onClick={addCompetence}
+              variant="outlined"
+            >
+              Créer la compétence
+            </Button>
           </div>
         </div>
 
